@@ -32,8 +32,7 @@ public class AppConfig { // 의존관계 주입을 대신 해주는 애가 DI �
 	@Bean
 	public OrderService orderService() {
 		System.out.println("call AppConfig.orderService");
-//		return new OrderServiceImpl(memberRepository(), discountPolicy());
-		return null;
+		return new OrderServiceImpl(memberRepository(), discountPolicy());
 	}
 	
 	@Bean
